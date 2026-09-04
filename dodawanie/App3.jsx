@@ -1,0 +1,12 @@
+import Add from './components/Add';
+import './App.css';
+
+function App(){
+    return(
+        <>
+            <Add />
+        </>
+    );
+}
+
+export default App;
