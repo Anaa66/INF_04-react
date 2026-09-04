@@ -6,4 +6,4 @@ nie uzywaj getElementById !!!!!!
 
 npm run dev - odpala program
 
-+ przed event to konwersja na liczbe (patrz kalkulator)
+(+) przed event to konwersja na liczbe (patrz kalkulator)
