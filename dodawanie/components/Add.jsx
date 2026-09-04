@@ -15,7 +15,7 @@ export default function Add(){
     function changeSecondNumberHandler(event){
         setEnteredNumbers((prevNumbers) => ({
             first: prevNumbers.first, 
-            second: +event.target.value,
+            second: +event.target.value, //+ to konwertowanie na liczbe
         }));
     }
 
