@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
 import 'bootstrap/dist/css/bootstrap.css';
+import './App.css';
 
 function App() {
   //nie ma strata bez tremolo
@@ -187,14 +188,69 @@ function App() {
     ""
   ]
 
+  //dorobic kropki jak jest tekst dluzszy niz iles tam
   return(
-    <div className='w-75'>
-      <div className="container w-25 mt-5">
-        <img src={stratocasterGit[0].image} alt={stratocasterGit[0].title} className='img-fluid'/>
-        <p className='fw-bold mt-5 fs-6'>{stratocasterGit[0].title}</p>
+
+    <>
+      <header className='row h-25'>
+        <img src="" alt="logo sklepu" />
+        <div className="container">
+          <div className="row">
+            <div className="col">
+              <form action="" className='form-control'>
+                <input type="text" />
+                <button>
+                  <img src="" alt="lupa" />
+                </button>
+              </form>
+            </div>
+            <div className="col">
+
+            </div>
+          </div>
+        </div>
+      </header>
+
+      <div className='w-75'>
+        <div className="card w-25">
+          <img className='card-img-top pt-3' src={stratocasterGit[0].image} alt={stratocasterGit[0].title}/>
+          <div className="container mt-3">
+            <div className="row">
+              <span className='two-line-truncate card-text'>
+                {stratocasterGit[0].title}
+              </span>
+            </div>
+            <div className='row pt-3 pb-2'>
+              <div className="col-8 d-flex align-items-center justify-content-start">
+                <span className=' fw-bold'>{stratocasterGit[0].price} zł</span>
+              </div>
+              <div className="col">
+                <button className='btn rounded-pill btn-outline-warning' type='button'>
+                    <img src="./assets/shoppingCart.png" alt="koszyk" id='cartImg'/>
+                </button>
+              </div>
+            </div>
+            
+          </div>
+        </div>
       </div>
-    </div>
+    </>
   );
 }
+
+/*
+<div className="row">
+  <div className="col">
+    <p className='fw-bold w-2 text-start m-0'>{stratocasterGit[0].price} zł</p>
+  </div>
+  <div className="col">
+    <button className='btn-icon rounded-pill d-flex align-items-right' type='button'>
+      <svg className='bi' width="16" height="16" >
+
+      </svg>
+    </button>
+  </div>
+</div>
+*/
 
 export default App
